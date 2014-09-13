@@ -35,6 +35,7 @@
 #define DEFAULT_THUMB_SIZE 25
 #define DEFAULT_PALM_SIZE 40
 #define DEFAULT_TOP_EDGE 10
+#define DEFAULT_LEFTRIGHT_EDGE 10
 #define DEFAULT_BOTTOM_EDGE 10
 #define DEFAULT_BUTTON_ENABLE 1
 #define DEFAULT_BUTTON_INTEGRATED 1
@@ -97,6 +98,10 @@ struct MConfig {
 	int touch_max;		// Maximum touch value.
 	int pad_width;		// Width of the touchpad.
 	int pad_height;		// Height of the touchpad.
+	int pad_x_min;		// Left-most X value
+	int pad_x_max;		// Right-most X value
+	int pad_y_min;		// Top-most Y value
+	int pad_y_max;		// Bottom-most Y value
 
 	// Set by config.
 	int touch_down;		// When is a finger touching? 0 - 100 (percentage)
@@ -109,6 +114,7 @@ struct MConfig {
 	int thumb_size;		// Minimum touch size for a thumb. 0 - 100
 	int palm_size;		// Minimum touch size for a palm. 0 - 100
 	int top_edge;		//Percent of top of trackpad to ignore for new touches. 0 - 100
+	int leftright_edge;		//Percent of each left and right of trackpad to ignore for new touches. 0 - 100
 	int bottom_edge;		// Percent of bottom of trackpad to ignore for new touches. 0 - 100
 	int axis_x_invert;	// Whether or not to invert the x axis. 0 or 1.
 	int axis_y_invert;	// Whether or not to invert the y axis. 0 or 1.

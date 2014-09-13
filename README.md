@@ -101,6 +101,12 @@ The size of an area at the bottom of the trackpad where new touches are ignored
 (fingers traveling into this area from above will still be tracked). This is
 represented as a percentage of the total trackpad height. Defaults to 10.
 
+**LeftRightEdge** -
+The size of the area at the left and right sides of the trackpad where new touches
+are ignored (fingers traveling into this area from above will still be tracked).
+This is represented as a percentage of the total trackpad width for each side, not
+the sum of the two areas. Defaults to 10 (10% on left and 10% on right).
+
 **ButtonEnable** - 
 Whether or not to enable the physical buttons on or near the trackpad. Boolean
 value. Defaults to true.
